@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.google.com" />
+<title>selscriptmix</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">selscriptmix</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>selenium</td>
+	<td>searchstring</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gbqfq</td>
+	<td>selenium</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gbqfb</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.q.qs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>'The 5 test results of the search are:'</td>
+	<td>urlsearch</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>//ol[@id='rso']/div[2]/</td>
+	<td>firstrso</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>/div/h3/a</td>
+	<td>secondrso</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>//ol[@id='rso']/div[2]/</td>
+	<td>firstrsospan</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>/div/div/div/span</td>
+	<td>secondrsospan</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>//ol[@id='rso']/div[2]/</td>
+	<td>firstrsospan</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>/div/div/div/span</td>
+	<td>secondrsospan</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>index</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars[&quot;index&quot;]&lt;5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;firstrso&quot;]+&quot;li[&quot;+storedVars[&quot;index&quot;]+&quot;]&quot;+storedVars[&quot;secondrso&quot;];</td>
+	<td>rsoelement</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;firstrsospan&quot;]+&quot;li[&quot;+storedVars[&quot;index&quot;]+&quot;]&quot;+storedVars[&quot;secondrsospan&quot;];</td>
+	<td>rsoelementspan</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>${rsoelement}</td>
+	<td>urlsite</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>${rsoelementspan}</td>
+	<td>descsite</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;urlsearch&quot;]+&quot;site:&quot;+storedVars[&quot;urlsite&quot;]+&quot; site_description:&quot;+storedVars[&quot;descsite&quot;] + &quot;;&quot;;</td>
+	<td>urlsearch</td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>storedVars[&quot;index&quot;]++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${urlsearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{alert(storedVars['urlsearch'])}</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
